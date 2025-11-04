@@ -9,9 +9,10 @@ import { Component, Signal } from "@angular/core";
     standalone: false,
     //POR AHORA NO VOY A TENER HTML SEPARADO, PODEMOS INCLUIRLO
     //DENTRO DEL PROPIO COMPONENT
-    template:`
-    <h1>Soy el primer component de Angular!!!</h1>
-    `
+    templateUrl: "./primer.component.html",
+    styleUrls: [
+        "./primer.component.css"
+    ]
  
 })
 
