@@ -1,4 +1,4 @@
-import { Component, OnInit, DoCheck } from "@angular/core";
+import { Component, OnInit } from "@angular/core";
 
 @Component({
     selector: "hooks-angular",
@@ -10,9 +10,15 @@ import { Component, OnInit, DoCheck } from "@angular/core";
 })
 
 export class HooksAngular implements OnInit {
+    public mensaje: string;
+    
     constructor() {
         console.log("Constructor: Primer método de inicio de Component");
+        this.mensaje = "Hoy es miércoles";
+    }
 
+    cambiarMensaje(): void {
+        this.mensaje = "Y mañana será jueves";
     }
 
     ngOnInit(): void {

@@ -1,0 +1,22 @@
+<div>
+    <h1>@Directivas Agular 2025</h1>
+    <ul>
+        @for (num of numeros; track num){
+            @if (num % 2 == 0) {
+                <li class="par">{{ num }}</li>
+            } @else {
+                <li class="impar">{{ num }}</li>
+            }
+        }
+    </ul>
+    <hr/>
+    <ul>
+        @for (sport of sports; track sport; let i = $index) {
+            <li>
+                Index: {{i}} Deporte: {{ sport }}
+            </li>
+        }@empty {
+            <p>No hay deportes disponibles.</p>
+        }
+    </ul>
+</div>

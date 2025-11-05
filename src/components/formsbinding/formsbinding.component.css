@@ -1,0 +1,158 @@
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    padding: 20px;
+}
+
+h1 {
+    color: #6c757d;
+    font-size: 2em;
+    margin-bottom: 15px;
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 1px;
+    animation: fadeInDown 0.6s ease-in;
+}
+
+h3 {
+    color: #788a99;
+    font-size: 1.3em;
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', sans-serif;
+    letter-spacing: 0.5px;
+    animation: fadeIn 0.8s ease-in;
+}
+
+h2 {
+    color: #6c757d;
+    font-size: 1.2em;
+    margin-top: 25px;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(180, 180, 200, 0.1);
+    animation: fadeInUp 0.8s ease-in;
+    line-height: 1.8;
+}
+
+form {
+    background: #f8fafc;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(180, 180, 200, 0.12);
+    padding: 28px 35px;
+    min-width: 300px;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    animation: scaleIn 0.5s ease-out;
+    transition: box-shadow 0.3s ease;
+}
+
+form:hover {
+    box-shadow: 0 6px 24px rgba(180, 180, 200, 0.18);
+}
+
+label {
+    color: #7b8fa1;
+    font-size: 1em;
+    margin-bottom: 4px;
+    font-weight: 500;
+    font-family: 'Segoe UI', sans-serif;
+    transition: color 0.3s ease;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 10px 12px;
+    border: 1.5px solid #e3e6ee;
+    border-radius: 8px;
+    background: #f3f6fb;
+    color: #495057;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    outline: none;
+    margin-bottom: 6px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #b6d0e2;
+    background: #eaf4fb;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(182, 208, 226, 0.2);
+}
+
+input[type="text"]:hover,
+input[type="number"]:hover {
+    border-color: #d0dfe8;
+}
+
+button[type="submit"] {
+    background: linear-gradient(90deg, #b6d0e2 0%, #f7cac9 100%);
+    color: #495057;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 8px;
+    box-shadow: 0 2px 8px rgba(180, 180, 200, 0.08);
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, #f7cac9 0%, #b6d0e2 100%);
+    color: #22223b;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 16px rgba(180, 180, 200, 0.2);
+}
+
+button[type="submit"]:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(180, 180, 200, 0.15);
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}

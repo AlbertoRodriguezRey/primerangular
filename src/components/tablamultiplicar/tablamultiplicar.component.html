@@ -1,0 +1,41 @@
+<div>
+    <h1>Tabla de Multiplicar</h1>
+    <form #multiplicarForm="ngForm">
+        <label>Número:</label>
+        <input type="number" name="cajanumero" [(ngModel)]="numero" (input)="generarTabla()" min="0" />
+        
+        <h2>Tabla usando *ngFor</h2>
+        <table *ngIf="tabla.length > 0">
+            <thead>
+                <tr>
+                    <th>Operación</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let resultado of tabla; let i = index">
+                    <td>{{ numero }} × {{ i + 1 }}</td>
+                    <td>{{ resultado }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>Tabla usando for</h2>
+        <table *ngIf="tabla.length > 0">
+            <thead>
+                <tr>
+                    <th>Operación</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @for (resultado of tabla; track $index) {
+                    <tr>
+                        <td>{{ numero }} × {{ $index + 1 }}</td>
+                        <td>{{ resultado }}</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </form>
+</div>

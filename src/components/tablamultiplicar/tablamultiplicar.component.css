@@ -1,0 +1,162 @@
+/* Contenedor principal */
+div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+}
+
+/* Título principal */
+h1 {
+    color: #4a5568;
+    font-size: 2.2em;
+    font-weight: 600;
+    font-family: 'Segoe UI', sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+    animation: fadeInDown 0.7s ease-out;
+}
+
+/* Subtítulos */
+h2 {
+    color: #5a6c75;
+    font-size: 1.4em;
+    margin: 30px 0 15px 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Formulario */
+form {
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    padding: 35px 40px;
+    min-width: 400px;
+    max-width: 600px;
+    animation: slideInUp 0.6s ease-out;
+}
+
+/* Label */
+label {
+    color: #718096;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: 'Segoe UI', sans-serif;
+    margin-bottom: 8px;
+    display: block;
+}
+
+/* Input número */
+input[type="number"] {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 10px;
+    background: #f7fafc;
+    color: #2d3748;
+    font-size: 1.05em;
+    font-family: 'Segoe UI', sans-serif;
+    transition: all 0.3s ease;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+input[type="number"]:focus {
+    border-color: #a8c5da;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(168, 197, 218, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Encabezados */
+thead th {
+    background: linear-gradient(135deg, #a8c5da 0%, #d4b5c8 100%);
+    color: #ffffff;
+    padding: 14px;
+    text-align: left;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+/* Filas */
+tbody tr {
+    border-bottom: 1px solid #e2e8f0;
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:hover {
+    background-color: #f7fafc;
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+/* Celdas */
+tbody td {
+    padding: 12px 14px;
+    color: #4a5568;
+    font-size: 1em;
+}
+
+tbody td:first-child {
+    font-weight: 500;
+    color: #2d3748;
+}
+
+tbody td:last-child {
+    font-weight: 600;
+    color: #a8c5da;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    form {
+        min-width: 300px;
+        padding: 25px 20px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    h2 {
+        font-size: 1.2em;
+    }
+}
